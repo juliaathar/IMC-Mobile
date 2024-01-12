@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/constraintLayout" app:layout_anchorGravity="center"
+            app:layout_anchor="@+id/constraintLayout">
+
+        <TextView
+                android:text="@string/titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_titulo"
+                android:textSize="24sp" android:textColor="#242C73" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@+id/txt_resultado"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_resultado"
+                android:visibility="invisible" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/txt_classificacao"
+                app:layout_constraintTop_toBottomOf="@+id/txt_titulo"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_classificacao"
+                android:visibility="invisible" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_resultado"
+                app:layout_constraintBottom_toTopOf="@+id/txt_tituloAltura"/>
+        <TextView
+                android:text="@string/alturaTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_tituloAltura"
+                android:textSize="16sp" android:textColor="#242C73"
+                android:textStyle="bold" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_classificacao"
+                app:layout_constraintBottom_toTopOf="@+id/input_altura"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/input_altura"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_tituloAltura"
+                app:layout_constraintBottom_toTopOf="@+id/txt_tituloPeso"/>
+        <TextView
+                android:text="@string/pesoTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_tituloPeso"
+                android:textSize="16sp" android:textColor="#242C73"
+                android:textStyle="bold" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_altura"
+                app:layout_constraintBottom_toTopOf="@+id/input_peso"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/input_peso"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintTop_toBottomOf="@+id/txt_tituloPeso"
+                app:layout_constraintBottom_toTopOf="@+id/btn_calcular"/>
+        <Button
+                android:text="Calcular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/btn_calcular"
+                android:backgroundTint="#242C73" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_peso" app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
